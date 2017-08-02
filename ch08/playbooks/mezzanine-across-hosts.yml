@@ -12,10 +12,11 @@
   hosts: web
   vars_files:
     - secrets.yml
+
   roles:
     - role: mezzanine
-      database_host: "{{ hostvars.db.ansible_eth1.ipv4.address }}"
-      live_hostname: 192.168.33.10.xip.io
+      database_host: "52.168.12.154"
+      live_hostname: 52.168.13.127.xip.io
       domains:
-        - 192.168.33.10.xip.io
-        - www.192.168.33.10.xip.io
+        - 52.168.13.127.xip.io
+        - www.52.168.13.127.xip.io

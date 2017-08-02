@@ -13,6 +13,10 @@
   pip: >
     requirements={{ mezzanine_proj_path }}/{{ mezzanine_reqs_path }}
     virtualenv={{ mezzanine_venv_path }}
+- name: Display all variables/facts known for a host
+  debug:
+    var: hostvars['db']
+    verbosity: 4
 - name: generate the settings file
   template: src=local_settings.py.j2 dest={{ mezzanine_proj_path }}/local_settings.py
 - name: sync the database, apply migrations, collect static content
