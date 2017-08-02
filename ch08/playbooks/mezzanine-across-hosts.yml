@@ -15,7 +15,7 @@
 
   roles:
     - role: mezzanine
-      database_host: "52.168.12.154"
+      database_host: "10.1.1.7"
       live_hostname: 52.168.13.127.xip.io
       domains:
         - 52.168.13.127.xip.io
